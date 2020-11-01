@@ -5,9 +5,8 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: [
-    'airbnb-base',
-  ],
+  extends: ['airbnb-base', 'prettier', 'plugin:prettier/recommended'],
+  plugins: ['import', 'prettier'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -16,5 +15,6 @@ module.exports = {
     ecmaVersion: 2018,
   },
   rules: {
+    'prettier/prettier': 'error',
   },
 };
